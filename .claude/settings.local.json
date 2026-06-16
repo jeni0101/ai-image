@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/ubuntu/.cache/ms-playwright/**)",
+      "Bash(npm init *)",
+      "Bash(npm i *)",
+      "Read(//tmp/**)",
+      "Bash(cp /tmp/gate-test.cjs ./gate-test.cjs)",
+      "Bash(node gate-test.cjs)",
+      "Bash(npx playwright install chromium >/tmp/pw3.log 2>&1 && echo \"ok\" || tail -5 /tmp/pw3.log *)",
+      "Bash(rm -f gate-test.cjs package.json package-lock.json)",
+      "Bash(rm -rf node_modules)",
+      "Bash(bash scripts/sync-dist.sh)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8123/index.html)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

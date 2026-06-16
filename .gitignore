@@ -1,0 +1,14 @@
+# 依赖 / 构建产物
+node_modules/
+dist/
+assets/raw/
+
+# 临时
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+.env
+.env.*
